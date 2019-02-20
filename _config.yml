@@ -60,7 +60,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2018
 
   # Icon between year and copyright info.
   icon:
@@ -116,7 +116,7 @@ creative_commons:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -138,10 +138,11 @@ exturl: false
 # External url should start with http:// or https://
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
+  guestbook: /guestbook/ || comments
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -157,8 +158,8 @@ menu_settings:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 #scheme: Gemini
 
@@ -175,9 +176,13 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/liuhuijun11832 || github
+  知乎: https://www.zhihu.com/people/qin-yuan-78-98/activities
+  微信: http://www.guitar-coder.cn/img/Wechat.jpeg || wechat
+  qq: http://www.guitar-coder.cn/img/QQ.jpeg || qq
+  E-Mail: mailto:liuhuijun_2017@163.com || envelope
+  
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -201,18 +206,22 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: Links
+links_title: 友情链接
 links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com
+links:
+  芋道源码: http://www.iocoder.cn/
+  程序猿DD: http://blog.didispace.com/
+  张砚池的博客: https://blog.iooo.tech
+  牧码: https://guanpengchn.github.io/
+  suveng`s blog: https://suveng.github.io/blog
 
 # Sidebar Avatar
 avatar:
   # in theme directory(source/images): /images/avatar.gif
   # in site  directory(source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpeg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -254,9 +263,9 @@ sidebar:
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
   # Back to top in sidebar.
-  b2t: false
+  b2t: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
@@ -301,7 +310,7 @@ post_meta:
 symbols_count_time:
   separated_meta: true
   item_text_post: true
-  item_text_total: false
+  item_text_total: true
   awl: 4
   wpm: 275
 
@@ -311,9 +320,9 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
-    show_result: false
+    show_result: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -326,9 +335,9 @@ codeblock:
 # And you can show or hide one article specially through add page variable `reward: true/false`.
 reward:
   enable: false
-  #comment: Donate comment here
-  #wechatpay: /images/wechatpay.jpg
-  #alipay: /images/alipay.jpg
+  comment: 坚持原创、技术分享。请作者喝杯茶吧！
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.jpg
 
 # Related popular posts
@@ -435,7 +444,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: consolas
     size:
 
 
@@ -525,9 +534,9 @@ disqus:
 
 # Changyan
 changyan:
-  enable: false
-  appid:
-  appkey:
+  enable: true
+  appid: cyu3U0Aqy
+  appkey: df207b097b8ac4407c32f41807f78fca
 
 # Valine
 # You can get your appid and appkey from https://leancloud.cn
@@ -701,7 +710,7 @@ firestore:
 # Show Views/Visitors of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true
@@ -860,7 +869,7 @@ pace_theme: pace-theme-minimal
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
-  enable: false
+  enable: true
   onmobile: true # display on mobile or not
   color: '0,0,255' # RGB values, use ',' to separate
   opacity: 0.5 # the opacity of line: 0~1
