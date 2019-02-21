@@ -79,19 +79,19 @@ footer:
     # Hexo link (Powered by Hexo).
     enable: true
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
     enable: true
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # http://www.miitbeian.gov.cn
   beian:
-    enable: false
-    icp:
+    enable: true
+    icp: 京ICP备19003464号
 
   # -------------------------------------------------------------
   # Any custom text can be defined here.
@@ -281,7 +281,7 @@ scroll_to_more: true
 save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Use <!-- more --> in the post to control excerpt accurately.
@@ -334,7 +334,7 @@ codeblock:
 # If true, reward would be displayed in every article by default.
 # And you can show or hide one article specially through add page variable `reward: true/false`.
 reward:
-  enable: false
+  enable: true
   comment: 坚持原创、技术分享。请作者喝杯茶吧！
   wechatpay: /images/wechatpay.png
   alipay: /images/alipay.png
@@ -519,7 +519,7 @@ pangu: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: c91d856e0af2969135bf34fb87ae8d93
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
@@ -537,7 +537,8 @@ changyan:
   enable: true
   appid: cyu3U0Aqy
   appkey: df207b097b8ac4407c32f41807f78fca
-
+daovoice: true
+daovoice_app_id: 37dd6385
 # Valine
 # You can get your appid and appkey from https://leancloud.cn
 # More info available at https://valine.js.org
@@ -759,7 +760,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto

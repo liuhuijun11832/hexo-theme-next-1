@@ -24,6 +24,16 @@
   <link rel="stylesheet" href="{{ pace_css_uri }}"/>
 {% endif %}
 
+{% if theme.daovoice %}
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/37dd6385.js","daovoice")
+  daovoice('init', {
+      app_id: "{{theme.daovoice_app_id}}"
+    });
+  daovoice('update');
+  </script>
+{% endif %}
+
 {% if theme.han %}
   {% set Han_uri = url_for(theme.vendors._internal + '/Han/dist/han.min.css?v=3.3') %}
   {% if theme.vendors.han %}
@@ -98,7 +108,15 @@
   <meta property="fb:admins" content="{{ theme.facebook_sdk.fb_admin }}"/>
   <meta property="fb:app_id" content="{{ theme.facebook_sdk.app_id }}"/>
 {% endif %}
-
+{% if theme.daovoice %}
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/37dd6385.js","daovoice")
+  daovoice('init', {
+      app_id: "{{theme.daovoice_app_id}}"
+    });
+  daovoice('update');
+  </script>
+{% endif %}
 {# Export some HEXO Configurations to Front-End #}
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
