@@ -534,7 +534,7 @@ disqus:
 
 # Changyan
 changyan:
-  enable: true
+  enable: false
   appid: cyu3U0Aqy
   appkey: df207b097b8ac4407c32f41807f78fca
 daovoice: true
