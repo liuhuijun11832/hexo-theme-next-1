@@ -71,7 +71,6 @@
             {% set date_diff = date(post.date) != date(post.updated) %}
             {% set time_diff = time(post.date) != time(post.updated) %}
             {% set datetime_diff = date_diff or time_diff %}
-			
 			{% if post.top %}
             <i class="fa fa-thumb-tack"></i>
             <font color=7D26CD>置顶</font>
@@ -85,7 +84,7 @@
               {% if theme.post_meta.item_text %}
                 <span class="post-meta-item-text">{{ __('post.posted') }}</span>
               {% endif %}
-
+			  
               {% if !date_diff && time_diff && theme.post_meta.updated_at.enabled && theme.post_meta.updated_at.another_day %}
                 {% set create_title = __('post.created') + __('symbol.colon') + full_date(post.date) + ' / ' + __('post.modified') + __('symbol.colon') + time(post.updated) %}
               {% else %}
